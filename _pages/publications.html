@@ -6,31 +6,42 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">You could see my published articles via <a href="{{site.author.googlescholar}}">my Google Scholar profile, and </a>.</div>
 {% endif %}
+<div class="publications">
 
-{% include base_path %}
+  I have also completed the writing of two unpublished papers for my new job, with the following titles:
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+  <div class="wordwrap">1. DECENT: Data-Centric Edge and Node Tuning for GNN Confidence Calibration</div>
+  <div class="wordwrap">2. DeepCTL: Neural Branching-Time CTL Satisfiability Checking via Recursive Decision Trees</div>
+
+</div>
+
+
+
+
+<!--{% include base_path %}-->
+
+<!--&lt;!&ndash; New style rendering if publication categories are defined &ndash;&gt;-->
+<!--{% if site.publication_category %}-->
+<!--  {% for category in site.publication_category  %}-->
+<!--    {% assign title_shown = false %}-->
+<!--    {% for post in site.publications reversed %}-->
+<!--      {% if post.category != category[0] %}-->
+<!--        {% continue %}-->
+<!--      {% endif %}-->
+<!--      {% unless title_shown %}-->
+<!--        <h2>{{ category[1].title }}</h2><hr />-->
+<!--        {% assign title_shown = true %}-->
+<!--      {% endunless %}-->
+<!--      {% include archive-single.html %}-->
+<!--    {% endfor %}-->
+<!--  {% endfor %}-->
+<!--{% else %}-->
+<!--  {% for post in site.publications reversed %}-->
+<!--    {% include archive-single.html %}-->
+<!--  {% endfor %}-->
+<!--{% endif %}-->
 
 
 
